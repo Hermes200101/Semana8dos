@@ -5,6 +5,7 @@
  */
 package Controlador;
 
+import Modelo.*;
 import Modelo.modelo;
 import Vista.lavado;
 import Vista.precios;
@@ -32,7 +33,6 @@ public class controlador extends modelo {
         r.setVisible(true);  
     }
     
-    public void 
     
     
 }
