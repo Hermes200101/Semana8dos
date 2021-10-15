@@ -124,7 +124,7 @@ public class precios extends javax.swing.JFrame {
         desinfeccionAvanzada = Double.parseDouble(txtDavanzado.getText());
         
         
-        precios p = new precios (auto, camint,combo1, combo2, combo3, lavadoBasico, desinfeccionbasica,desinfeccionAvanzada);
+        precios pes = new precios (auto, camint,combo1, combo2, combo3, lavadoBasico, desinfeccionbasica,desinfeccionAvanzada);
         
        
         
