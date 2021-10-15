@@ -1,15 +1,6 @@
 package Vista;
+import Vista.precios;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- *
- * @author Wlfran
- */
 public class precios extends javax.swing.JFrame {
 
     /**
@@ -38,15 +29,15 @@ public class precios extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        auto = new javax.swing.JTextField();
-        camioneta = new javax.swing.JTextField();
-        combo1 = new javax.swing.JTextField();
-        combo2 = new javax.swing.JTextField();
-        combo3 = new javax.swing.JTextField();
-        lbasico = new javax.swing.JTextField();
-        lespecial = new javax.swing.JTextField();
-        dbasico = new javax.swing.JTextField();
-        davanzado = new javax.swing.JTextField();
+        txtAuto = new javax.swing.JTextField();
+        txtCamioneta = new javax.swing.JTextField();
+        txtCombo1 = new javax.swing.JTextField();
+        txtCombo2 = new javax.swing.JTextField();
+        txtCombo3 = new javax.swing.JTextField();
+        txtLbasico = new javax.swing.JTextField();
+        txtLespecial = new javax.swing.JTextField();
+        txtDbasico = new javax.swing.JTextField();
+        txtDavanzado = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
@@ -89,19 +80,24 @@ public class precios extends javax.swing.JFrame {
         jLabel9.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel9.setText("Desinfección avanzada:");
         getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 410, -1, -1));
-        getContentPane().add(auto, new org.netbeans.lib.awtextra.AbsoluteConstraints(189, 93, 80, -1));
-        getContentPane().add(camioneta, new org.netbeans.lib.awtextra.AbsoluteConstraints(189, 131, 80, -1));
-        getContentPane().add(combo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(189, 169, 80, -1));
-        getContentPane().add(combo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(189, 207, 80, -1));
-        getContentPane().add(combo3, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 250, 80, -1));
-        getContentPane().add(lbasico, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 290, 80, -1));
-        getContentPane().add(lespecial, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 330, 80, -1));
-        getContentPane().add(dbasico, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 370, 80, -1));
-        getContentPane().add(davanzado, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 410, 80, -1));
+        getContentPane().add(txtAuto, new org.netbeans.lib.awtextra.AbsoluteConstraints(189, 93, 80, -1));
+        getContentPane().add(txtCamioneta, new org.netbeans.lib.awtextra.AbsoluteConstraints(189, 131, 80, -1));
+        getContentPane().add(txtCombo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(189, 169, 80, -1));
+        getContentPane().add(txtCombo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(189, 207, 80, -1));
+        getContentPane().add(txtCombo3, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 250, 80, -1));
+        getContentPane().add(txtLbasico, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 290, 80, -1));
+        getContentPane().add(txtLespecial, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 330, 80, -1));
+        getContentPane().add(txtDbasico, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 370, 80, -1));
+        getContentPane().add(txtDavanzado, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 410, 80, -1));
 
         jButton1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/verde (1).jpg"))); // NOI18N
         jButton1.setText("Agregar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 260, 107, 45));
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -113,6 +109,27 @@ public class precios extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        double auto, camint, combo1,combo2,combo3,lavadoBasico,lavadoEspecial,desinfeccionbasica,desinfeccionAvanzada;
+        
+        auto = Double.parseDouble(txtAuto.getText());
+        camint = Double.parseDouble(txtCamioneta.getText());
+        combo1 = Double.parseDouble(txtCombo1.getText());
+        combo2 = Double.parseDouble(txtCombo2.getText());
+        combo3 = Double.parseDouble(txtCombo3.getText());
+        lavadoBasico = Double.parseDouble(txtLbasico.getText());
+        lavadoEspecial = Double.parseDouble(txtLespecial.getText());
+        desinfeccionbasica = Double.parseDouble(txtDbasico.getText());
+        desinfeccionAvanzada = Double.parseDouble(txtDavanzado.getText());
+        
+        
+        precios p = new precios (auto, camint,combo1, combo2, combo3, lavadoBasico, desinfeccionbasica,desinfeccionAvanzada);
+        
+       
+        
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -150,13 +167,6 @@ public class precios extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField auto;
-    private javax.swing.JTextField camioneta;
-    private javax.swing.JTextField combo1;
-    private javax.swing.JTextField combo2;
-    private javax.swing.JTextField combo3;
-    private javax.swing.JTextField davanzado;
-    private javax.swing.JTextField dbasico;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -169,7 +179,14 @@ public class precios extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JTextField lbasico;
-    private javax.swing.JTextField lespecial;
+    private javax.swing.JTextField txtAuto;
+    private javax.swing.JTextField txtCamioneta;
+    private javax.swing.JTextField txtCombo1;
+    private javax.swing.JTextField txtCombo2;
+    private javax.swing.JTextField txtCombo3;
+    private javax.swing.JTextField txtDavanzado;
+    private javax.swing.JTextField txtDbasico;
+    private javax.swing.JTextField txtLbasico;
+    private javax.swing.JTextField txtLespecial;
     // End of variables declaration//GEN-END:variables
 }
