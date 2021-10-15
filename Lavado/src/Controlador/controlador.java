@@ -9,13 +9,14 @@ import Modelo.modelo;
 import Vista.lavado;
 import Vista.precios;
 import Vista.registro;
+import java.util.ArrayList;
 
 /**
  *
  * @author Wlfran
  */
 public class controlador extends modelo {
-    
+    ArrayList<Datos> lista = new ArrayList<>();
     public void lavado(){
         lavado l = new lavado();
         l.setVisible(true);   
@@ -28,10 +29,10 @@ public class controlador extends modelo {
     
     public void registro(){
         registro r = new registro();
-        r.setVisible(true);
-            
-        
+        r.setVisible(true);  
     }
+    
+    public void 
     
     
 }
