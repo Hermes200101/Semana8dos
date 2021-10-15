@@ -122,7 +122,7 @@ public class precios extends javax.swing.JFrame {
         lavadoEspecial = Double.parseDouble(txtLespecial.getText());
         desinfeccionbasica = Double.parseDouble(txtDbasico.getText());
         desinfeccionAvanzada = Double.parseDouble(txtDavanzado.getText());
-        
+        en
         
         precios pes = new precios (auto, camint,combo1, combo2, combo3, lavadoBasico, desinfeccionbasica,desinfeccionAvanzada);
         
