@@ -18,6 +18,7 @@ public class lavado extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
         txt_valor.setEnabled(false);
+        DescripcionC1.setEnabled(false);
         
     }
 
@@ -48,11 +49,14 @@ public class lavado extends javax.swing.JFrame {
         combovehiculo = new javax.swing.JComboBox<>();
         comboservicio = new javax.swing.JComboBox<>();
         jButton1 = new javax.swing.JButton();
+        DescripcionC1 = new javax.swing.JTextField();
+        jLabel10 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
 
         jButton2.setText("jButton2");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Cliente");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/lavado (2) (2).jpg"))); // NOI18N
@@ -76,20 +80,20 @@ public class lavado extends javax.swing.JFrame {
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 320, -1, -1));
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel7.setText("Combos");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 400, -1, -1));
+        jLabel7.setText("Descripción");
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 370, -1, -1));
 
         jCheckBox1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jCheckBox1.setText("Combo 1");
-        getContentPane().add(jCheckBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 430, -1, -1));
+        getContentPane().add(jCheckBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 400, -1, -1));
 
         jCheckBox2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jCheckBox2.setText("Combo 2");
-        getContentPane().add(jCheckBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 460, -1, -1));
+        getContentPane().add(jCheckBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 430, -1, -1));
 
         jCheckBox3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jCheckBox3.setText("Combo 3");
-        getContentPane().add(jCheckBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 490, -1, -1));
+        getContentPane().add(jCheckBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 460, -1, -1));
         getContentPane().add(txt_valor, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 600, 120, -1));
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -112,6 +116,13 @@ public class lavado extends javax.swing.JFrame {
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/verde (1).jpg"))); // NOI18N
         jButton1.setText("Aceptar");
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 530, 100, 30));
+
+        DescripcionC1.setText("Lavado, Policahdo y desengrasante por debajo");
+        getContentPane().add(DescripcionC1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 400, -1, -1));
+
+        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel10.setText("Combos");
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 370, -1, -1));
 
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondo.jpg"))); // NOI18N
         getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 370, 670));
@@ -159,6 +170,7 @@ public class lavado extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField DescripcionC1;
     public javax.swing.JComboBox<String> comboservicio;
     public javax.swing.JComboBox<String> combovehiculo;
     private javax.swing.JButton jButton1;
@@ -167,6 +179,7 @@ public class lavado extends javax.swing.JFrame {
     public javax.swing.JCheckBox jCheckBox2;
     public javax.swing.JCheckBox jCheckBox3;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

@@ -1,6 +1,7 @@
 package Vista;
 import Vista.precios;
 import Modelo.*;
+import javax.swing.JOptionPane;
 
 
 public class precios extends javax.swing.JFrame {
@@ -11,7 +12,9 @@ public class precios extends javax.swing.JFrame {
     public precios() {
         initComponents();
         this.setLocationRelativeTo(null);
+        
     }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -45,6 +48,7 @@ public class precios extends javax.swing.JFrame {
         jLabel11 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Precios de Lavado");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -113,7 +117,9 @@ public class precios extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        double auto, camint, combo1,combo2,combo3,lavadoBasico,lavadoEspecial,desinfeccionbasica,desinfeccionAvanzada;
+        double auto, camint,combo1, combo2,combo3, lavadoBasico,lavadoEspecial,desinfeccionbasica,desinfeccionAvanzada;
+        
+       
         
         auto = Double.parseDouble(txtAuto.getText());
         camint = Double.parseDouble(txtCamioneta.getText());
@@ -126,11 +132,9 @@ public class precios extends javax.swing.JFrame {
         desinfeccionAvanzada = Double.parseDouble(txtDavanzado.getText());
         
         
-        //precios pes = new precios (auto, camint,combo1, combo2, combo3, lavadoBasico, desinfeccionbasica,desinfeccionAvanzada);
         
        
-        
-        
+       
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
@@ -169,7 +173,7 @@ public class precios extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    public javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -181,14 +185,14 @@ public class precios extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JTextField txtAuto;
-    private javax.swing.JTextField txtCamioneta;
-    private javax.swing.JTextField txtCombo1;
-    private javax.swing.JTextField txtCombo2;
-    private javax.swing.JTextField txtCombo3;
-    private javax.swing.JTextField txtDavanzado;
-    private javax.swing.JTextField txtDbasico;
-    private javax.swing.JTextField txtLbasico;
-    private javax.swing.JTextField txtLespecial;
+    public javax.swing.JTextField txtAuto;
+    public javax.swing.JTextField txtCamioneta;
+    public javax.swing.JTextField txtCombo1;
+    public javax.swing.JTextField txtCombo2;
+    public javax.swing.JTextField txtCombo3;
+    public javax.swing.JTextField txtDavanzado;
+    public javax.swing.JTextField txtDbasico;
+    public javax.swing.JTextField txtLbasico;
+    public javax.swing.JTextField txtLespecial;
     // End of variables declaration//GEN-END:variables
 }
