@@ -8,8 +8,7 @@ import Vista.*;
 
 
 public class preciosM {
-    public int camioneta, combo1, combo2, combo3, lbasico, lespecial, dbasica, davanzada;
-    public double auto;
+    public double auto, camioneta, combo1, combo2, combo3, lbasico, lespecial, dbasica, davanzada;
 
     public double getAuto() {
         return auto;
@@ -19,69 +18,71 @@ public class preciosM {
         this.auto = auto;
     }
 
-    public int getCamioneta() {
+    public double getCamioneta() {
         return camioneta;
     }
 
-    public void setCamioneta(int camioneta) {
+    public void setCamioneta(double camioneta) {
         this.camioneta = camioneta;
     }
 
-    public int getCombo1() {
+    public double getCombo1() {
         return combo1;
     }
 
-    public void setCombo1(int combo1) {
+    public void setCombo1(double combo1) {
         this.combo1 = combo1;
     }
 
-    public int getCombo2() {
+    public double getCombo2() {
         return combo2;
     }
 
-    public void setCombo2(int combo2) {
+    public void setCombo2(double combo2) {
         this.combo2 = combo2;
     }
 
-    public int getCombo3() {
+    public double getCombo3() {
         return combo3;
     }
 
-    public void setCombo3(int combo3) {
+    public void setCombo3(double combo3) {
         this.combo3 = combo3;
     }
 
-    public int getLbasico() {
+    public double getLbasico() {
         return lbasico;
     }
 
-    public void setLbasico(int lbasico) {
+    public void setLbasico(double lbasico) {
         this.lbasico = lbasico;
     }
 
-    public int getLespecial() {
+    public double getLespecial() {
         return lespecial;
     }
 
-    public void setLespecial(int lespecial) {
+    public void setLespecial(double lespecial) {
         this.lespecial = lespecial;
     }
 
-    public int getDbasica() {
+    public double getDbasica() {
         return dbasica;
     }
 
-    public void setDbasica(int dbasica) {
+    public void setDbasica(double dbasica) {
         this.dbasica = dbasica;
     }
 
-    public int getDavanzada() {
+    public double getDavanzada() {
         return davanzada;
     }
 
-    public void setDavanzada(int davanzada) {
+    public void setDavanzada(double davanzada) {
         this.davanzada = davanzada;
     }
+    
+
     
     public static void accionBotonAgregar(){
 //        preciosM p = new preciosM();

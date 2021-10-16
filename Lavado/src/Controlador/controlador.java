@@ -6,6 +6,7 @@
 package Controlador;
 
 import Modelo.Datos;
+import Modelo.preciosM;
 import Vista.lavado;
 import Vista.preciosV;
 import Vista.registro;
@@ -47,13 +48,27 @@ public class controlador {
         combo2 = Double.parseDouble(ventana.getTxtCombo2().getText());
         combo3 = Double.parseDouble(ventana.getTxtCombo3().getText());
         lavadoBasico = Double.parseDouble(ventana.getTxtLbasico().getText());
+        lavadoEspecial = Double.parseDouble(ventana.getTxtLespecial().getText());
         desinfeccionbasica = Double.parseDouble(ventana.getTxtDbasico().getText());
         desinfeccionAvanzada = Double.parseDouble(ventana.getTxtDavanzado().getText());
         
-        preciosV p = new preciosV();
+        preciosM p = new preciosM();
         
-//        p.setAuto(auto);
-//        p.setCamioneta(camint);
+        p.setAuto(auto);
+        p.setCamioneta(camint);
+        p.setCombo1(combo1);
+        p.setCombo2(combo2);
+        p.setCombo3(combo3);
+        p.setDavanzada(camint);
+        p.setDbasica(camint);
+        p.setLbasico(lavadoBasico);
+        p.setLespecial(lavadoEspecial);
+        
+        String autooo = String.valueOf(auto);
+        
+        
+        System.out.println("EL VALOR DEL AUTO"+autooo);
+       
     }
 //        
     
