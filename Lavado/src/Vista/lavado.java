@@ -126,7 +126,7 @@ public class lavado extends javax.swing.JFrame {
         jLabel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 460, -1, 20));
 
-        jLabel12.setText("Lavado, Policahdo y desengrasante por debajo.");
+        jLabel12.setText("Lavado, Polichado y desengrasante por debajo.");
         jLabel12.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 400, -1, -1));
 
