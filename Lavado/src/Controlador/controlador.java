@@ -5,65 +5,29 @@
  */
 package Controlador;
 
-import Modelo.*;
-import Modelo.modelo;
+import Modelo.Datos;
 import Vista.lavado;
-import Vista.precios;
-import Vista.principal;
+import Vista.preciosV;
 import Vista.registro;
 import java.util.ArrayList;
-import javax.swing.JOptionPane;
-import javax.swing.plaf.RootPaneUI;
 
 /**
  *
  * @author Wlfran
  */
-public class controlador extends modelo {
-    ArrayList<Datos> lista = new ArrayList<>();
-    public static principal ventana = new principal();
-    
-//    public static void mostrar() {
-//        ventana.setVisible(true);
-//    }
-//    public static void ocultar(){
-//        ventana.setVisible(false);
-//    }
-    
+public class controlador {
+    static preciosV ventana = new preciosV (); 
+    public static void mostrar(){
+        
+    }
     public void lavado(){
         lavado l = new lavado();
         l.setVisible(true);   
     }
     
-    public static void precios(){
-        precios p = new precios();
+    public void precios(){
+        preciosV p = new preciosV();
         p.setVisible(true);
-    
-
-    }
-    
-    public static void accionesBotonAceptar(){
-        precios p = new precios();
-        double auto, camint,combo1, combo2,combo3, lavadoBasico,lavadoEspecial,desinfeccionbasica,desinfeccionAvanzada;
-        String combo33, autoo;
-        
-        //p.getTxtAuto().getText();
-        auto = Double.parseDouble(p.getTxtAuto().getText());
-        camint = Double.parseDouble(p.txtCamioneta.getText());
-        combo1 = Double.parseDouble(p.txtCombo1.getText());
-        combo2 = Double.parseDouble(p.txtCombo2.getText());
-        combo3 = Double.parseDouble(p.txtCombo3.getText());
-        lavadoBasico = Double.parseDouble(p.txtLbasico.getText());
-        desinfeccionbasica = Double.parseDouble(p.txtDbasico.getText());
-        desinfeccionAvanzada = Double.parseDouble(p.txtDavanzado.getText());
-
-        //combo33 = String.valueOf(combo1);
-        autoo = String.valueOf(auto);
-        //JOptionPane.showInternalMessageDialog(rootPane,"EL VALOR DE COMBO 3 ES = "+combo33);
-        //System.out.println("EL VALOR DEL COMBO 3 ES = "+combo33);
-        System.out.println("EL VALOR DEL COMBO 3 ES = "+autoo);
-        
-        //JOptionPane.showMessageDialog(ventana, "EL VALOR DE COMBO 3 ES = "+combo33);
     }
     
     public void registro(){
@@ -71,7 +35,27 @@ public class controlador extends modelo {
         r.setVisible(true);  
     }
     
-    
+    public static void accionesBotonAceptar(){
+
+        System.out.println("PRESIONO EL BOTON AGREGAR");
+        double auto, camint,combo1, combo2,combo3, lavadoBasico,lavadoEspecial,desinfeccionbasica,desinfeccionAvanzada;
+
+       
+        auto = Double.parseDouble(ventana.getTxtAuto().getText());
+        camint = Double.parseDouble(ventana.getTxtCamioneta().getText());
+        combo1 = Double.parseDouble(ventana.getTxtCombo1().getText());
+        combo2 = Double.parseDouble(ventana.getTxtCombo2().getText());
+        combo3 = Double.parseDouble(ventana.getTxtCombo3().getText());
+        lavadoBasico = Double.parseDouble(ventana.getTxtLbasico().getText());
+        desinfeccionbasica = Double.parseDouble(ventana.getTxtDbasico().getText());
+        desinfeccionAvanzada = Double.parseDouble(ventana.getTxtDavanzado().getText());
+        
+        preciosV p = new preciosV();
+        
+//        p.setAuto(auto);
+//        p.setCamioneta(camint);
+    }
+//        
     
     
 }

@@ -7,14 +7,15 @@ package Modelo;
 import Vista.*;
 
 
-public class precios {
-    public int auto, camioneta, combo1, combo2, combo3, lbasico, lespecial, dbasica, davanzada;
+public class preciosM {
+    public int camioneta, combo1, combo2, combo3, lbasico, lespecial, dbasica, davanzada;
+    public double auto;
 
-    public int getAuto() {
+    public double getAuto() {
         return auto;
     }
 
-    public void setAuto(int auto) {
+    public void setAuto(double auto) {
         this.auto = auto;
     }
 
@@ -83,7 +84,7 @@ public class precios {
     }
     
     public static void accionBotonAgregar(){
-//        precios p = new precios();
+//        preciosM p = new preciosM();
 //        double auto1, camint,combo1, combo2,combo3, lavadoBasico,lavadoEspecial,desinfeccionbasica,desinfeccionAvanzada;
 //        
 //        

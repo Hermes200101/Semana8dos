@@ -5,6 +5,9 @@
  */
 package Vista;
 
+import Controlador.controlador;
+import Controlador.controlador2;
+import static Vista.lavado.lista;
 import javax.swing.ImageIcon;
 
 /**
@@ -20,6 +23,22 @@ public class registro extends javax.swing.JFrame {
         initComponents();
         setIconImage(new ImageIcon(getClass().getResource("/imagenes/RegistroPng.png")).getImage());
         this.setLocationRelativeTo(null);
+        
+        String matriz[][] = new String[lista.size()][4];
+
+        for (int i = 0; i < lista.size(); i++) {
+
+            matriz[i][0] = lista.get(i).getFecha();
+            matriz[i][1] = lista.get(i).getNombre();
+            matriz[i][2] = lista.get(i).getVehiculo();
+            matriz[i][3] = lista.get(i).getServicio();
+        }
+        tabla.setModel(new javax.swing.table.DefaultTableModel(
+            matriz,
+            new String [] {
+                "Fecha", "Nombre", "Vehiculo", "Servicio"
+            }
+        ));
     }
 
     /**
@@ -31,32 +50,17 @@ public class registro extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tabla = new javax.swing.JTable();
         jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Registros");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
-            },
-            new String [] {
-                "Fecha", "Nombre", "Servicio"
-            }
-        ));
-        jScrollPane1.setViewportView(jTable1);
-
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 95, 543, 190));
 
         jLabel1.setText("Fecha:");
 
@@ -92,8 +96,23 @@ public class registro extends javax.swing.JFrame {
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 10, -1, -1));
 
+        tabla.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Fecha", "Nombre", "Vehiculo", "Servicio"
+            }
+        ));
+        jScrollPane1.setViewportView(tabla);
+
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 95, 580, 190));
+
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondo.jpg"))); // NOI18N
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(-7, 0, 550, 280));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(-7, 0, 590, 280));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -139,7 +158,7 @@ public class registro extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
     private javax.swing.JTextField jTextField1;
+    public javax.swing.JTable tabla;
     // End of variables declaration//GEN-END:variables
 }

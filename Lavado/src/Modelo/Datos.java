@@ -10,14 +10,13 @@ package Modelo;
  * @author Wlfran
  */
 public class Datos {
-    private String nombre, fecha, vehiculo, servicio, combo;
+    private String nombre, fecha, vehiculo, servicio;
 
-    public Datos(String nombre, String fecha, String vehiculo, String servicio, String combo) {
+    public Datos(String fecha, String nombre, String vehiculo, String servicio) {
         this.nombre = nombre;
         this.fecha = fecha;
         this.vehiculo = vehiculo;
         this.servicio = servicio;
-        this.combo = combo;
     }
 
     public String getNombre() {
@@ -34,10 +33,6 @@ public class Datos {
 
     public String getServicio() {
         return servicio;
-    }
-
-    public String getCombo() {
-        return combo;
     }
 
 }

@@ -5,6 +5,9 @@
  */
 package Vista;
 
+import Controlador.controlador;
+import Modelo.Datos;
+import java.util.ArrayList;
 import javax.swing.ImageIcon;
 
 /**
@@ -16,6 +19,8 @@ public class lavado extends javax.swing.JFrame {
     /**
      * Creates new form lavado
      */
+    static ArrayList<Datos> lista = new ArrayList<>();
+    String s,v;
     public lavado() {
         initComponents();
         setIconImage(new ImageIcon(getClass().getResource("/imagenes/Clientepng.png")).getImage());
@@ -104,9 +109,19 @@ public class lavado extends javax.swing.JFrame {
         getContentPane().add(txt_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 240, 150, -1));
 
         combovehiculo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Automovil", "Camioneta" }));
+        combovehiculo.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                combovehiculoItemStateChanged(evt);
+            }
+        });
         getContentPane().add(combovehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 280, 150, -1));
 
         comboservicio.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Lavado Básico", "Lavado especial", "Desinfección básica", "Desinfección avanzada" }));
+        comboservicio.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                comboservicioItemStateChanged(evt);
+            }
+        });
         comboservicio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 comboservicioActionPerformed(evt);
@@ -116,6 +131,11 @@ public class lavado extends javax.swing.JFrame {
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/verde (1).jpg"))); // NOI18N
         jButton1.setText("Aceptar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 530, 100, 30));
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -147,6 +167,18 @@ public class lavado extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_comboservicioActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+      lista.add(new Datos(txt_fecha.getText(),txt_nombre.getText() ,v, s));
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void comboservicioItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_comboservicioItemStateChanged
+        s = comboservicio.getSelectedItem().toString();
+    }//GEN-LAST:event_comboservicioItemStateChanged
+
+    private void combovehiculoItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_combovehiculoItemStateChanged
+        v = combovehiculo.getSelectedItem().toString();
+    }//GEN-LAST:event_combovehiculoItemStateChanged
+   
     /**
      * @param args the command line arguments
      */
