@@ -54,7 +54,7 @@
     <Component class="javax.swing.JLabel" name="jLabel3">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/imagenes/lavado (2) (2).jpg"/>
+          <Image iconType="3" name="/imagenes/1634352202443.png"/>
         </Property>
       </Properties>
       <Constraints>
