@@ -5,6 +5,8 @@
  */
 package Vista;
 
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author Wlfran
@@ -16,6 +18,7 @@ public class registro extends javax.swing.JFrame {
      */
     public registro() {
         initComponents();
+        setIconImage(new ImageIcon(getClass().getResource("/imagenes/RegistroPng.png")).getImage());
         this.setLocationRelativeTo(null);
     }
 
@@ -37,6 +40,7 @@ public class registro extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Registros");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(

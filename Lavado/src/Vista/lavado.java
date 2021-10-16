@@ -5,6 +5,8 @@
  */
 package Vista;
 
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author Wlfran
@@ -16,6 +18,7 @@ public class lavado extends javax.swing.JFrame {
      */
     public lavado() {
         initComponents();
+        setIconImage(new ImageIcon(getClass().getResource("/imagenes/Clientepng.png")).getImage());
         this.setLocationRelativeTo(null);
         txt_valor.setEnabled(false);
     

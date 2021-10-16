@@ -1,6 +1,7 @@
 package Vista;
 import Vista.precios;
 import Modelo.*;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 
@@ -11,6 +12,7 @@ public class precios extends javax.swing.JFrame {
      */
     public precios() {
         initComponents();
+        setIconImage(new ImageIcon(getClass().getResource("/imagenes/Precio.png")).getImage());
         this.setLocationRelativeTo(null);
         
     }

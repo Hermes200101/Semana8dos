@@ -6,6 +6,7 @@
 package Vista;
 
 import Controlador.controlador;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 /**
@@ -17,6 +18,7 @@ public class principal extends javax.swing.JFrame {
     controlador c = new controlador();
     public principal() {
         initComponents();
+        setIconImage(new ImageIcon(getClass().getResource("/imagenes/1634352202443.png")).getImage());
         this.setLocationRelativeTo(null);
     }
 
@@ -37,6 +39,7 @@ public class principal extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("INICIO");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Clientepng.png"))); // NOI18N
@@ -98,6 +101,7 @@ public class principal extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
        JOptionPane.showMessageDialog(rootPane, "Desarrollado por: \n"+"        Wlfran Steven Forero \n"+"        Evelin Soler\n"+"        Hermes Duvan Castro\n");
+       //JOptionPane.showMessageDialog(rootPane, "Desarrollado por: \n"+"        Wlfran Steven Forero \n"+"        Evelin Soler\n"+"        Hermes Duvan Castro\n", "Acerca de ", JOptionPane.PLAIN_MESSAGE);
     }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
