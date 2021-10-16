@@ -126,13 +126,8 @@ public class preciosV extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BtnAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnAgregarActionPerformed
-     
-        
-        //Controlador.controlador.accionesBotonAceptar();
-        Controlador.controlador.accionesBotonAceptar();
-       //Modelo.preciosV.accionBotonAgregar();
-       
-        
+
+        Controlador.controlador.accionesBotonAceptar();   
     }//GEN-LAST:event_BtnAgregarActionPerformed
 
     /**

@@ -37,8 +37,7 @@ public class controlador {
     }
     
     public static void accionesBotonAceptar(){
-
-        System.out.println("PRESIONO EL BOTON AGREGAR");
+        
         double auto, camint,combo1, combo2,combo3, lavadoBasico,lavadoEspecial,desinfeccionbasica,desinfeccionAvanzada;
 
        
@@ -63,14 +62,8 @@ public class controlador {
         p.setDbasica(camint);
         p.setLbasico(lavadoBasico);
         p.setLespecial(lavadoEspecial);
-        
-        String autooo = String.valueOf(auto);
-        
-        
-        System.out.println("EL VALOR DEL AUTO"+autooo);
        
-    }
-//        
+    }       
     
     
 }
