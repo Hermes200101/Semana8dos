@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package Modelo;
+import Vista.*;
 
 
 public class precios {
@@ -81,7 +82,21 @@ public class precios {
         this.davanzada = davanzada;
     }
     
-    
-    
+    public static void accionBotonAgregar(){
+//        precios p = new precios();
+//        double auto1, camint,combo1, combo2,combo3, lavadoBasico,lavadoEspecial,desinfeccionbasica,desinfeccionAvanzada;
+//        
+//        
+//        auto1 = Double.pasrseDouble(p.getTxtAuto().getText());
+//   
+//        //auto1 = Double.parseDouble(p.txtAuto.getText());
+//        camint = Double.parseDouble(p.txtCamioneta.getText());
+//        combo1 = Double.parseDouble(p.txtCombo1.getText());
+//        combo2 = Double.parseDouble(p.txtCombo2.getText());
+//        combo3 = Double.parseDouble(p.txtCombo3.getText());
+//        lavadoBasico = Double.parseDouble(p.txtLbasico.getText());
+//        desinfeccionbasica = Double.parseDouble(p.txtDbasico.getText());
+//        desinfeccionAvanzada = Double.parseDouble(p.txtDavanzado.getText());
+    }
     
 }

@@ -1,8 +1,11 @@
 package Vista;
-import Vista.precios;
+import Vista.*;
 import Modelo.*;
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import javax.swing.JTextField;
 
 
 public class precios extends javax.swing.JFrame {
@@ -10,12 +13,16 @@ public class precios extends javax.swing.JFrame {
     /**
      * Creates new form precios
      */
+    
     public precios() {
         initComponents();
         setIconImage(new ImageIcon(getClass().getResource("/imagenes/Precio.png")).getImage());
         this.setLocationRelativeTo(null);
+       
         
     }
+    
+    
     
 
     /**
@@ -45,7 +52,7 @@ public class precios extends javax.swing.JFrame {
         txtLespecial = new javax.swing.JTextField();
         txtDbasico = new javax.swing.JTextField();
         txtDavanzado = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        BtnAgregar = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
 
@@ -98,15 +105,15 @@ public class precios extends javax.swing.JFrame {
         getContentPane().add(txtDbasico, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 370, 80, -1));
         getContentPane().add(txtDavanzado, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 410, 80, -1));
 
-        jButton1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/verde (1).jpg"))); // NOI18N
-        jButton1.setText("Agregar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        BtnAgregar.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        BtnAgregar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/verde (1).jpg"))); // NOI18N
+        BtnAgregar.setText("Agregar");
+        BtnAgregar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                BtnAgregarActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 260, 107, 45));
+        getContentPane().add(BtnAgregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 260, 107, 45));
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel10.setText("Precios de lavado");
@@ -118,26 +125,15 @@ public class precios extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        double auto, camint,combo1, combo2,combo3, lavadoBasico,lavadoEspecial,desinfeccionbasica,desinfeccionAvanzada;
+    private void BtnAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnAgregarActionPerformed
+     
         
+        //Controlador.controlador.accionesBotonAceptar();
+        Controlador.controlador.accionesBotonAceptar();
+       //Modelo.precios.accionBotonAgregar();
        
         
-        auto = Double.parseDouble(txtAuto.getText());
-        camint = Double.parseDouble(txtCamioneta.getText());
-        combo1 = Double.parseDouble(txtCombo1.getText());
-        combo2 = Double.parseDouble(txtCombo2.getText());
-        combo3 = Double.parseDouble(txtCombo3.getText());
-        lavadoBasico = Double.parseDouble(txtLbasico.getText());
-        lavadoEspecial = Double.parseDouble(txtLespecial.getText());
-        desinfeccionbasica = Double.parseDouble(txtDbasico.getText());
-        desinfeccionAvanzada = Double.parseDouble(txtDavanzado.getText());
-        
-        
-        
-       
-       
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_BtnAgregarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -174,8 +170,51 @@ public class precios extends javax.swing.JFrame {
         });
     }
 
+   
+
+    public JButton getBtnAgregar() {
+        return BtnAgregar;
+    }
+
+
+    public JTextField getTxtAuto() {
+        return txtAuto;
+    }
+
+    public JTextField getTxtCamioneta() {
+        return txtCamioneta;
+    }
+
+    public JTextField getTxtCombo1() {
+        return txtCombo1;
+    }
+
+    public JTextField getTxtCombo2() {
+        return txtCombo2;
+    }
+
+    public JTextField getTxtCombo3() {
+        return txtCombo3;
+    }
+
+    public JTextField getTxtDavanzado() {
+        return txtDavanzado;
+    }
+
+    public JTextField getTxtDbasico() {
+        return txtDbasico;
+    }
+
+    public JTextField getTxtLbasico() {
+        return txtLbasico;
+    }
+
+    public JTextField getTxtLespecial() {
+        return txtLespecial;
+    }
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton jButton1;
+    public javax.swing.JButton BtnAgregar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
