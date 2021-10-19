@@ -6,8 +6,7 @@
 package Vista;
 
 import Controlador.controlador;
-import Controlador.controlador2;
-import static Vista.lavado.lista;
+import Controlador.controlador3;
 import javax.swing.ImageIcon;
 
 /**
@@ -16,29 +15,13 @@ import javax.swing.ImageIcon;
  */
 public class registro extends javax.swing.JFrame {
 
-    /**
-     * Creates new form registro
-     */
+    controlador3 co = new controlador3();
     public registro() {
         initComponents();
         setIconImage(new ImageIcon(getClass().getResource("/imagenes/RegistroPng.png")).getImage());
         this.setLocationRelativeTo(null);
+        co.mostrar();
         
-        String matriz[][] = new String[lista.size()][4];
-
-        for (int i = 0; i < lista.size(); i++) {
-
-            matriz[i][0] = lista.get(i).getFecha();
-            matriz[i][1] = lista.get(i).getNombre();
-            matriz[i][2] = lista.get(i).getVehiculo();
-            matriz[i][3] = lista.get(i).getServicio();
-        }
-        tabla.setModel(new javax.swing.table.DefaultTableModel(
-            matriz,
-            new String [] {
-                "Fecha", "Nombre", "Vehiculo", "Servicio"
-            }
-        ));
     }
 
     /**
@@ -52,7 +35,7 @@ public class registro extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        fecha = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tabla = new javax.swing.JTable();
@@ -64,6 +47,12 @@ public class registro extends javax.swing.JFrame {
 
         jLabel1.setText("Fecha:");
 
+        fecha.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                fechaKeyTyped(evt);
+            }
+        });
+
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/lavado (2) (5).jpg"))); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -74,7 +63,7 @@ public class registro extends javax.swing.JFrame {
                 .addGap(29, 29, 29)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(fecha, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 126, Short.MAX_VALUE)
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -89,7 +78,7 @@ public class registro extends javax.swing.JFrame {
                         .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(fecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel1))
                         .addGap(24, 24, 24))))
         );
@@ -116,6 +105,10 @@ public class registro extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void fechaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_fechaKeyTyped
+        co.filtrar();
+    }//GEN-LAST:event_fechaKeyTyped
 
     /**
      * @param args the command line arguments
@@ -153,12 +146,12 @@ public class registro extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public static javax.swing.JTextField fecha;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField jTextField1;
-    public javax.swing.JTable tabla;
+    public static javax.swing.JTable tabla;
     // End of variables declaration//GEN-END:variables
 }

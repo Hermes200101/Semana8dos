@@ -6,9 +6,17 @@
 package Vista;
 
 import Controlador.controlador;
+import Controlador.controlador3;
 import Modelo.Datos;
+import Modelo.preciosM;
 import java.util.ArrayList;
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JCheckBox;
+import javax.swing.JComboBox;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JTextField;
 
 /**
  *
@@ -19,8 +27,10 @@ public class lavado extends javax.swing.JFrame {
     /**
      * Creates new form lavado
      */
-    static ArrayList<Datos> lista = new ArrayList<>();
-    String s,v;
+    
+    public static String s,v;  
+    controlador3 co = new controlador3();
+
     public lavado() {
         initComponents();
         setIconImage(new ImageIcon(getClass().getResource("/imagenes/Clientepng.png")).getImage());
@@ -45,9 +55,9 @@ public class lavado extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jCheckBox1 = new javax.swing.JCheckBox();
-        jCheckBox2 = new javax.swing.JCheckBox();
-        jCheckBox3 = new javax.swing.JCheckBox();
+        chekcombo1 = new javax.swing.JCheckBox();
+        chekcombo2 = new javax.swing.JCheckBox();
+        chekcombo3 = new javax.swing.JCheckBox();
         txt_valor = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
         txt_fecha = new javax.swing.JTextField();
@@ -89,17 +99,17 @@ public class lavado extends javax.swing.JFrame {
         jLabel7.setText("Descripción");
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 370, -1, -1));
 
-        jCheckBox1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jCheckBox1.setText("Combo 1");
-        getContentPane().add(jCheckBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 400, -1, -1));
+        chekcombo1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        chekcombo1.setText("Combo 1");
+        getContentPane().add(chekcombo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 400, -1, -1));
 
-        jCheckBox2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jCheckBox2.setText("Combo 2");
-        getContentPane().add(jCheckBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 430, -1, -1));
+        chekcombo2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        chekcombo2.setText("Combo 2");
+        getContentPane().add(chekcombo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 430, -1, -1));
 
-        jCheckBox3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jCheckBox3.setText("Combo 3");
-        getContentPane().add(jCheckBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 460, -1, -1));
+        chekcombo3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        chekcombo3.setText("Combo 3");
+        getContentPane().add(chekcombo3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 460, -1, -1));
         getContentPane().add(txt_valor, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 580, 120, -1));
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
@@ -108,15 +118,20 @@ public class lavado extends javax.swing.JFrame {
         getContentPane().add(txt_fecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 200, 150, -1));
         getContentPane().add(txt_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 240, 150, -1));
 
-        combovehiculo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Automovil", "Camioneta" }));
+        combovehiculo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione", "Automovil", "Camioneta" }));
         combovehiculo.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
                 combovehiculoItemStateChanged(evt);
             }
         });
+        combovehiculo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                combovehiculoActionPerformed(evt);
+            }
+        });
         getContentPane().add(combovehiculo, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 280, 150, -1));
 
-        comboservicio.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Lavado Básico", "Lavado especial", "Desinfección básica", "Desinfección avanzada" }));
+        comboservicio.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione", "Lavado Básico", "Lavado especial", "Desinfección básica", "Desinfección avanzada" }));
         comboservicio.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
                 comboservicioItemStateChanged(evt);
@@ -168,7 +183,12 @@ public class lavado extends javax.swing.JFrame {
     }//GEN-LAST:event_comboservicioActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-      lista.add(new Datos(txt_fecha.getText(),txt_nombre.getText() ,v, s));
+        
+        co.array();
+        co.precio();
+        co.check();
+        co.fin();
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void comboservicioItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_comboservicioItemStateChanged
@@ -178,6 +198,10 @@ public class lavado extends javax.swing.JFrame {
     private void combovehiculoItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_combovehiculoItemStateChanged
         v = combovehiculo.getSelectedItem().toString();
     }//GEN-LAST:event_combovehiculoItemStateChanged
+
+    private void combovehiculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_combovehiculoActionPerformed
+
+    }//GEN-LAST:event_combovehiculoActionPerformed
    
     /**
      * @param args the command line arguments
@@ -214,14 +238,17 @@ public class lavado extends javax.swing.JFrame {
         });
     }
 
+    
+    
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JComboBox<String> comboservicio;
-    public javax.swing.JComboBox<String> combovehiculo;
-    private javax.swing.JButton jButton1;
+    public static javax.swing.JCheckBox chekcombo1;
+    public static javax.swing.JCheckBox chekcombo2;
+    public static javax.swing.JCheckBox chekcombo3;
+    public static javax.swing.JComboBox<String> comboservicio;
+    public static javax.swing.JComboBox<String> combovehiculo;
+    public javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    public javax.swing.JCheckBox jCheckBox1;
-    public javax.swing.JCheckBox jCheckBox2;
-    public javax.swing.JCheckBox jCheckBox3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -235,8 +262,12 @@ public class lavado extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    public javax.swing.JTextField txt_fecha;
-    public javax.swing.JTextField txt_nombre;
-    public javax.swing.JTextField txt_valor;
+    public static javax.swing.JTextField txt_fecha;
+    public static javax.swing.JTextField txt_nombre;
+    public static javax.swing.JTextField txt_valor;
     // End of variables declaration//GEN-END:variables
+
+  
+
+    
 }

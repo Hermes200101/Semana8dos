@@ -1,27 +1,23 @@
 package Vista;
-import Vista.*;
-import Modelo.*;
+
+import Controlador.controlador3;
+import Modelo.preciosM;
 import javax.swing.ImageIcon;
-import javax.swing.JButton;
-import javax.swing.JLabel;
 import javax.swing.JOptionPane;
-import javax.swing.JTextField;
+
 
 
 public class preciosV extends javax.swing.JFrame {
 
-    /**
-     * Creates new form precios
-     */
     
     public preciosV() {
         initComponents();
         setIconImage(new ImageIcon(getClass().getResource("/imagenes/Precio.png")).getImage());
         this.setLocationRelativeTo(null);
        
+       
         
     }
-    
     
     
 
@@ -120,14 +116,20 @@ public class preciosV extends javax.swing.JFrame {
         getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 30, -1, -1));
 
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondo.jpg"))); // NOI18N
-        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 440, 480));
+        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 440, 460));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void BtnAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnAgregarActionPerformed
 
-        Controlador.controlador.accionesBotonAceptar();   
+        controlador3 c = new controlador3();
+        c.dat();
+
+        
+        
+        
+  
     }//GEN-LAST:event_BtnAgregarActionPerformed
 
     /**
@@ -166,48 +168,9 @@ public class preciosV extends javax.swing.JFrame {
         });
     }
 
-   
-
-    public JButton getBtnAgregar() {
-        return BtnAgregar;
-    }
+ 
 
 
-    public JTextField getTxtAuto() {
-        return txtAuto;
-    }
-
-    public JTextField getTxtCamioneta() {
-        return txtCamioneta;
-    }
-
-    public JTextField getTxtCombo1() {
-        return txtCombo1;
-    }
-
-    public JTextField getTxtCombo2() {
-        return txtCombo2;
-    }
-
-    public JTextField getTxtCombo3() {
-        return txtCombo3;
-    }
-
-    public JTextField getTxtDavanzado() {
-        return txtDavanzado;
-    }
-
-    public JTextField getTxtDbasico() {
-        return txtDbasico;
-    }
-
-    public JTextField getTxtLbasico() {
-        return txtLbasico;
-    }
-
-    public JTextField getTxtLespecial() {
-        return txtLespecial;
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton BtnAgregar;
@@ -222,18 +185,16 @@ public class preciosV extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    public javax.swing.JTextField txtAuto;
-    public javax.swing.JTextField txtCamioneta;
-    public javax.swing.JTextField txtCombo1;
-    public javax.swing.JTextField txtCombo2;
-    public javax.swing.JTextField txtCombo3;
-    public javax.swing.JTextField txtDavanzado;
-    public javax.swing.JTextField txtDbasico;
-    public javax.swing.JTextField txtLbasico;
-    public javax.swing.JTextField txtLespecial;
+    public static javax.swing.JTextField txtAuto;
+    public static javax.swing.JTextField txtCamioneta;
+    public static javax.swing.JTextField txtCombo1;
+    public static javax.swing.JTextField txtCombo2;
+    public static javax.swing.JTextField txtCombo3;
+    public static javax.swing.JTextField txtDavanzado;
+    public static javax.swing.JTextField txtDbasico;
+    public static javax.swing.JTextField txtLbasico;
+    public static javax.swing.JTextField txtLespecial;
     // End of variables declaration//GEN-END:variables
 
-    public void setAuto(double auto) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    
 }
