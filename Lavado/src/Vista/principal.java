@@ -100,7 +100,7 @@ public class principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-       JOptionPane.showMessageDialog(rootPane, "Desarrollado por: \n"+"        Wlfran Steven Forero \n"+"        Evelin Soler\n"+"        Hermes Duvan Castro\n");
+       JOptionPane.showMessageDialog(rootPane, "Desarrollado por: \n"+"        Wlfran Steven Forero \n"+"        Evelin Barragan Soler\n"+"        Hermes Duvan Castro\n");
        //JOptionPane.showMessageDialog(rootPane, "Desarrollado por: \n"+"        Wlfran Steven Forero \n"+"        Evelin Soler\n"+"        Hermes Duvan Castro\n", "Acerca de ", JOptionPane.PLAIN_MESSAGE);
     }//GEN-LAST:event_jButton4ActionPerformed
 

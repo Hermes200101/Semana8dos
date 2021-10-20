@@ -48,7 +48,7 @@ public class controlador3 extends preciosM{
         registro.tabla.setModel(new javax.swing.table.DefaultTableModel(
             matriz,
             new String [] {
-                "Fecha", "Nombre", "Vehiculo", "Servicio"
+                "Fecha", "Funcionario", "Vehiculo", "Servicio"
             }
         ));
     }
@@ -83,23 +83,23 @@ public class controlador3 extends preciosM{
         }
         
         if("Lavado Básico".equals(lavado.s)){
-            total1 = total1 * getLbasico();
+            total1 = total1 + getLbasico();
             System.out.println(getLbasico());
             System.out.println(total1);
         }
         
         if("Lavado especial".equals(lavado.s)){
-            total1 = total1 *getLespecial();
+            total1 = total1 + getLespecial();
             System.out.println(total1);
         }
         
         if("Desinfección básica".equals(lavado.s)){
-            total1 = total1 *getDbasica();
+            total1 = total1 + getDbasica();
             System.out.println(total1);
         }
         
         if("Desinfección avanzada".equals(lavado.s)){
-            total1 = total1 *getDavanzada();
+            total1 = total1 + getDavanzada();
             System.out.println(total1);
         }
             
@@ -148,6 +148,43 @@ public class controlador3 extends preciosM{
         registro.tabla.setRowSorter(TRSFiltro);
     }
     
+    public void filtar2(){
+        registro.funcionario.addKeyListener(new KeyAdapter() {
+
+            public void keyReleased(final KeyEvent e) {
+                String cadena = (registro.funcionario.getText());
+                registro.funcionario.setText(cadena);
+                Filtro2();
+            }
+
+        });
+
+        TRSFiltro = new TableRowSorter(registro.tabla.getModel());
+        registro.tabla.setRowSorter(TRSFiltro);
+    }
+    public void Filtro2(){
+        int ColumntaTabla = 1;
+        TRSFiltro.setRowFilter(RowFilter.regexFilter(registro.funcionario.getText(), ColumntaTabla));
+    }
+    
+    public void filtar3(){
+        registro.servicio.addKeyListener(new KeyAdapter() {
+
+            public void keyReleased(final KeyEvent e) {
+                String cadena = (registro.servicio.getText());
+                registro.servicio.setText(cadena);
+                Filtro3();
+            }
+
+        });
+
+        TRSFiltro = new TableRowSorter(registro.tabla.getModel());
+        registro.tabla.setRowSorter(TRSFiltro);
+    }
+    public void Filtro3(){
+        int ColumntaTabla = 3;
+        TRSFiltro.setRowFilter(RowFilter.regexFilter(registro.servicio.getText(), ColumntaTabla));
+    }
     
     
 }
