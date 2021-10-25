@@ -107,13 +107,13 @@ public class controlador3 extends preciosM{
 
     public void check(){
         if(lavado.chekcombo1.isSelected()){
-            total1 = total1 *getCombo1();
+            total1 = total1 + getCombo1();
         }
         if(lavado.chekcombo2.isSelected()){
-            total1 = total1 * getCombo2();
+            total1 = total1 + getCombo2();
         }
         if(lavado.chekcombo3.isSelected()){
-            total1 = total1 * getCombo3();
+            total1 = total1 + getCombo3();
         }
     }
     
